@@ -1,8 +1,9 @@
+import { CurrencyPipe, DatePipe, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-courses-list',
-  imports: [],
+  imports: [NgStyle, DatePipe, CurrencyPipe],
   templateUrl: './courses-list.html',
   styleUrl: './courses-list.css'
 })
