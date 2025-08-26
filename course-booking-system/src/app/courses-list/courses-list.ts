@@ -18,5 +18,8 @@ courses = [
   ngOnInit(): void {
     console.log("CoursesList initialized!")
   }
+  onCourseBooked(course: { title: string; }): void {
+    console.log("Parent heard about booking" + course.title);
+  }
 
 }
