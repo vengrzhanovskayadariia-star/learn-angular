@@ -12,5 +12,6 @@
   @if (course.onSale){
     <div class="sale-banner">On sale!</div>
   }
+  <button (click) = "onAddToWishlist()">Add to Wishlist</button>
   <button [disabled]="course.soldOut" (click) = "onCourseBooked()">Book course</button>
 </div>

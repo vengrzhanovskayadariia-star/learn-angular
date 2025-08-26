@@ -13,8 +13,13 @@ import {CurrencyPipe, DatePipe} from "@angular/common";
 export class CourseCard {
 @Input() course: any;
 @Output() courseBooked: EventEmitter<any> = new EventEmitter();
+@Output() addedToWishlist: EventEmitter<any> = new EventEmitter();
 
   onCourseBooked(): void {
     this.courseBooked.emit(this.course);
+  }
+
+  onAddToWishlist(): void {
+    this.addedToWishlist.emit(this.course);
   }
 }
