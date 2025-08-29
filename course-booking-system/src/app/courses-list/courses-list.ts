@@ -18,15 +18,14 @@ constructor(private courseService: CourseService) {
 }
 
   ngOnInit(): void {
-  this.courseService.getCourses().subscribe(courses => this.courses = courses);
-    // this.courseService.getCourses().subscribe({
-    //   next: (data: Course[]) => {
-    //     this.courses = data;
-    //   },
-    //   error: (error) => {
-    //     console.log("Error fetching courses: ", error);
-    //   }
-    // });
+    this.courseService.getCourses().subscribe({
+      next: (data: Course[]) => {
+        this.courses = data;
+      },
+      error: (error) => {
+        console.log("Error fetching courses: ", error);
+      }
+    });
     console.log("CoursesList initialized!")
   }
 

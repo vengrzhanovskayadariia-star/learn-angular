@@ -10,5 +10,5 @@
   </div>
 }
 @for(course of courses; track course.id){
-<app-course-card [course]="course" (courseBooked)="onCourseBooked($event)" (addedToWishlist)="onAddToWishlist($event)"></app-course-card>
+  <app-course-card [course]="course" (courseBooked)="onCourseBooked($event)" ></app-course-card>
 }
