@@ -29,5 +29,22 @@
       "soldOut": false
     }
   ],
-  "students": []
+  "students": [
+    {
+      "id": 1756571386694,
+      "name": "tdd",
+      "email": "ff@gmail.com",
+      "enrolledCourseIds": [
+        "2"
+      ]
+    },
+    {
+      "id": 1756571635939,
+      "name": "tddS",
+      "email": "dff@gmail.com",
+      "enrolledCourseIds": [
+        "3"
+      ]
+    }
+  ]
 }
