@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {CourseService} from '../services/course';
 import {Course} from '../models/course.model';
 
@@ -19,9 +19,9 @@ export class SignUpForm implements OnInit {
 
   ngOnInit() {
     this.signUpForm = this.formBuilder.group({
-      name: [''],
-      email: [''],
-      enrolledCourseId: [null]
+      name: ['', [Validators.required, Validators.minLength(3) ]],
+      email: ['', [Validators.required, Validators.email]],
+      enrolledCourseId: [null, [Validators.required]],
     })
 
     this.courseService.getCourses().subscribe({
